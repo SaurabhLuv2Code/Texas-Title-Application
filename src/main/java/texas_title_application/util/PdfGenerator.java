@@ -39,31 +39,51 @@ public class PdfGenerator {
                     throw new RuntimeException("No AcroForm found in the PDF template.");
                 }
                 // Loop through all fields in the AcroForm
-//                for (PDField field : acroForm.getFields()) {
-//                    System.out.println("Field Name: " + field.getFullyQualifiedName());
+                for (PDField field : acroForm.getFields()) {
+                    System.out.println("Field Name: " + field.getFullyQualifiedName());
 //                    System.out.println("Field Type: " + field.getClass().getSimpleName());
-//                }
+                }
 
                 // Map fields using correct field names
+
+                // Map existing fields using correct field names
                 setFieldValue(acroForm, "1 Vehicle Identification Number", request.getVin());
                 setFieldValue(acroForm, "2 Year", request.getYear().toString());
                 setFieldValue(acroForm, "3 Make", request.getMake());
                 setFieldValue(acroForm, "4 Body Style", request.getBodyStyle());
                 setFieldValue(acroForm, "5 Model", request.getModel());
                 setFieldValue(acroForm, "6 Major Color", request.getMajorColor());
-//                setFieldValue(acroForm, "7 Minor Color", request.getMinorColor());
+                setFieldValue(acroForm, "7 Minor Color", request.getMinorColor());
                 setFieldValue(acroForm, "8 Texas License Plate No", request.getTexasLicensePlateNo());
                 setFieldValue(acroForm, "9 Odometer Reading no tenths", request.getOdometerReading().toString());
                 setFieldValue(acroForm, "11 Empty Weight", request.getEmptyWeight());
                 setFieldValue(acroForm, "12 Carrying Capacity if any", request.getCarryingCapacity());
-                setFieldValue(acroForm, "14 Applicant Photo ID Number or FEINEIN", request.getPhotoIdNumber());
+                setFieldValue(acroForm, "14 Applicant Photo ID Number or FEINEIN", request.getApplicantPhotoIdNumber());
                 setFieldValue(acroForm, "16 Applicant First Name or Entity Name Middle Name Last Name Suffix if any", request.getApplicantName());
-                setFieldValue(acroForm, "18 Applicant Mailing Address City State Zip", request.getAddress());
+                setFieldValue(acroForm, "17 Additional Applicant First Name if applicable Middle Name Last Name Suffix if any", request.getAdditionalApplicantName());
+                setFieldValue(acroForm, "18 Applicant Mailing Address City State Zip", request.getApplicantMailingAddress());
+                setFieldValue(acroForm, "19 Applicant County of Residence", request.getApplicantCountyOfResidence());
                 setFieldValue(acroForm, "20 Previous Owner Name or Entity Name City State", request.getPreviousOwnerName());
-                setFieldValue(acroForm, "34 First Lienholder Name if any Mailing Address City State Zip", request.getLienholderAddress());
+                setFieldValue(acroForm, "23 Renewal Recipient First Name or Entity Name if different Middle Name Last Name Suffix if any", request.getRenewalRecipientName());
+                setFieldValue(acroForm, "24 Renewal Notice Mailing Address if different City State Zip", request.getRenewalNoticeMailingAddress());
+                setFieldValue(acroForm, "25 Applicant Phone Number optional", request.getApplicantPhoneNumber());
+                setFieldValue(acroForm, "26 Email optional", request.getEmail());
+                setFieldValue(acroForm, "29 Vehicle Location Address if different City State Zip", request.getVehicleLocationAddress());
+                setFieldValue(acroForm, "34 First Lienholder Name if any Mailing Address City State Zip", request.getFirstLienholderName());
+                setFieldValue(acroForm, "36 TradeIn if any Year Make Vehicle Identification Number", request.getTradeInYearMakeVin());
                 setFieldValue(acroForm, "Seller  Name", request.getSellerName());
-                setFieldValue(acroForm, "Date", request.getDateOfSale());
-
+                setFieldValue(acroForm, "Date", request.getDate());
+                setFieldValue(acroForm, "Sales Price Minus Rebate Amount", request.getSalesPriceMinusRebateAmount());
+                setFieldValue(acroForm, "State Taxes Were Paid To", request.getStateTaxesPaidTo());
+                setFieldValue(acroForm, "$90 New Resident Tax  Previous State", request.getNewResidentTax());
+                setFieldValue(acroForm, "Amount of Tax and Penalty Due", request.getAmountOfTaxAndPenaltyDue());
+                System.out.println("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
+                setFieldValue(acroForm, "Late Tax Payment Penalty of 5% or", request.getLateTaxPaymentPenalty5());
+                System.out.println("kkkkkkkkkkkkkkkkkkkkkkkk");
+                setFieldValue(acroForm, "Late Tax Payment Penalty of 10%", request.getLateTaxPaymentPenalty10());
+                System.out.println("hhhhhhhhhhhhhhhhhhhhhhhh");
+                setFieldValue(acroForm, "Date_2", request.getDate2());
+                setFieldValue(acroForm, "Date_3", request.getDate3());
                 // Save filled form to byte array
                 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 

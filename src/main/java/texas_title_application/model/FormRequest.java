@@ -27,45 +27,151 @@ public class FormRequest {
     @NotBlank(message = "Major Color is required")
     private String majorColor;
 
-    @NotNull(message = "Odometer Reading is required")
-    private Integer odometerReading;
+    @NotBlank(message = "Minor Color is required")
+    private String minorColor;
 
     @NotBlank(message = "Texas License Plate No is required")
     private String texasLicensePlateNo;
 
-    @NotBlank(message = "Applicant Name is required")
-    private String applicantName;
+    @NotNull(message = "Odometer Reading is required")
+    private Integer odometerReading;
 
-    @NotBlank(message = "Address is required")
-    private String address;
-
-    @NotBlank(message = "Photo ID Type is required")
-    private String photoIdType;
-
-    @NotBlank(message = "Photo ID Number is required")
-    private String photoIdNumber;
-
-    @NotBlank(message = "Application Type is required")
-    private String applicationType;
-
-    @NotBlank(message = "Date of Sale is required")
-    private String dateOfSale;
-
-    @NotNull(message = "Sale Price is required")
-    private Double salePrice;
-
-    @NotBlank(message = "Seller Name is required")
-    private String sellerName;
-
-    @NotBlank(message = "Lienholder Name is required")
-    private String lienholderName;
-
-    @NotBlank(message = "Lienholder Address is required")
-    private String lienholderAddress;
-
-    private String previousOwnerName;
+    private String emptyWeight;
 
     private String carryingCapacity;
 
-    private String emptyWeight;
+    @NotBlank(message = "Photo ID Number is required")
+    private String applicantPhotoIdNumber;
+
+    @NotBlank(message = "Applicant Name is required")
+    private String applicantName;
+
+    private String additionalApplicantName;
+
+    @NotBlank(message = "Mailing Address is required")
+    private String applicantMailingAddress;
+
+    private String applicantCountyOfResidence;
+
+    private String previousOwnerName;
+
+    private String renewalRecipientName;
+
+    private String renewalNoticeMailingAddress;
+
+    private String applicantPhoneNumber;
+
+    private String email;
+
+    private String vehicleLocationAddress;
+
+    private String certifiedTitleLienholderIdNumber;
+
+    private String firstLienDate;
+
+    private String firstLienholderName;
+
+    private String titleRegistration;
+    private String titleOnly;
+    private String registrationPurposesOnly;
+    private String vehicleDescription;
+    private String addRemoveLien;
+    private String otherReasonForCorrection;
+    private String notActual;
+    private String exceedsMechanicalLimits;
+    private String exempt;
+    private String business;
+    private String government;
+
+    private String trust;
+
+    private String nonProfit;
+
+    private String passportIssued;
+
+    private String natoId;
+
+    private String usMilitaryId;
+
+    private String otherMilitaryStatus;
+
+    private String usDeptStateId;
+
+    private String usDeptHomelandSecurityId;
+
+    private String permitNumber;
+
+    private String gdnLessorNumber;
+
+    private String tradeIn;
+
+    private String exemptionClaimed;
+
+    private String sellerName;
+
+    private String date;
+
+    private String date2;
+
+    private String date3;
+
+    private String dealerGdn;
+
+    private String tradeInYearMakeVin;
+
+    private String stateTaxesPaidTo;
+
+    private String newResidentTax;
+
+    private String evenTradeTax;
+
+    private String giftTax;
+
+    private String rebuiltSalvageFee;
+
+    private String salesTaxExemptionReason;
+
+    private String passport;
+    private String individual;
+    private String yesProvideEmail;
+    private String yesAttachFormVTR216;
+    private String yesAttachFormVTR267;
+    private String additionalTradeIns;
+    private String salesAndUseTax;
+
+    private String lateTaxPaymentPenalty5;
+
+    private String lateTaxPaymentPenalty10;
+
+    private String residentPreviousState;
+
+    private String emissionsFeeDiesel;
+
+    private String fairMarketValueDeduction;
+
+    private String rebateAmount;
+
+    private String salesPriceMinusRebateAmount;
+
+    private String tradeInAmount;
+
+    private String taxableAmount;
+
+    private String lateTaxPaymentPenaltyAmount;
+
+    private String amountOfTaxesPaid;
+
+    private String amountOfTaxAndPenaltyDue;
+
+    private String motorVehicleRetailerPermit;
+
+    private String stateOfIdDl;
+
+    private String applicationFee;
+
+    private String applyCorrectedTitle;
+
+    private String vehicleInspected;
+
+    private String vehicleUnrecovered;
 }
